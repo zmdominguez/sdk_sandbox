@@ -1,0 +1,28 @@
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                               xmlns:app="http://schemas.android.com/apk/res-auto"
+                                               xmlns:tools="http://schemas.android.com/tools"
+                                               android:layout_width="match_parent"
+                                               android:layout_height="?android:attr/listPreferredItemHeightSmall"
+                                               tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/header"
+        android:gravity="bottom"
+        android:layout_height="wrap_content"
+        android:text="Hello World!!!"
+        app:layout_heightPercent="50%"
+        app:layout_widthPercent="100%"/>
+
+    <TextView
+        android:id="@+id/subheader"
+        android:layout_below="@id/header"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:text="Button"
+        app:layout_heightPercent="50%"
+        app:layout_marginEndPercent="50%"
+        app:layout_marginStartPercent="50%"
+        app:layout_widthPercent="100%"/>
+
+
+</android.support.percent.PercentRelativeLayout>
