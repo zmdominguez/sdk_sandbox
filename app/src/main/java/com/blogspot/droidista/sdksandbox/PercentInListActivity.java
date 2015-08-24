@@ -57,19 +57,17 @@ public class PercentInListActivity extends Activity {
 
     class CheesesAdapter extends BaseAdapter {
 
-        String[] items = {"Item 1", "Item 2", "Item 3", "Item 4", "Item 5"};
-
         CheesesAdapter() {
         }
 
         @Override
         public int getCount() {
-            return items.length;
+            return Cheeses.sCheeseStrings.length;
         }
 
         @Override
         public Object getItem(int position) {
-            return items[position];
+            return Cheeses.sCheeseStrings[position];
         }
 
         @Override
@@ -89,8 +87,8 @@ public class PercentInListActivity extends Activity {
                 view.setTag(holder);
             }
 
-            holder.mHeader.setText("Header " + position);
-            String value = "Subheader " + position;
+            holder.mHeader.setText(Cheeses.sCheeseStrings[position]);
+            String value = "Cheese #" + (position + 1);
             if (TextUtils.isEmpty(value)) {
                 holder.mSubHeader.setVisibility(View.GONE);
             } else {
