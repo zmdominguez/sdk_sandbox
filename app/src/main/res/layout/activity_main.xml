@@ -21,4 +21,10 @@
         android:layout_height="wrap_content"
         android:text="Percent in list (with min height)"/>
 
+    <Button
+        android:id="@+id/button_send_notification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send notification"/>
+
 </LinearLayout>
