@@ -27,4 +27,27 @@
         android:layout_height="wrap_content"
         android:text="Send notification"/>
 
+    <EditText
+        android:id="@+id/first_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textCapWords"
+        android:imeOptions="actionDone"
+        android:hint="I am a 'normal' EditText!" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/report_listing_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/comments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="3"
+            android:inputType="textCapSentences"
+            android:imeOptions="actionDone"
+            android:hint="I am an EditText in a TextInputLayout!"/>
+    </android.support.design.widget.TextInputLayout>
+
 </LinearLayout>
