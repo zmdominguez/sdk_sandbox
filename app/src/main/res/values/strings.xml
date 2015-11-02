@@ -4,4 +4,14 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_percent_in_list">PercentInList</string>
+    <string name="jake_quote">Dude, suckin\' at something is the first step towards being sorta good at something.</string>
+    <string name="jake">Jake</string>
+    <string name="finn">Finn</string>
+    <string name="finn_quote">I floop the Pig!</string>
+    <string name="lsp_quote">My beans!</string>
+    <string name="lsp">LSP</string>
+    <string name="pb_quote">sometimes you want someone and you want to kiss them and be with them, but you can\'t because responsibility demands sacrifice.</string>
+    <string name="pb">Princess Bubblegum</string>
+    <string name="lemongrab_quote">Unacceptable!</string>
+    <string name="lemongrab">Earl of Lemongrab</string>
 </resources>

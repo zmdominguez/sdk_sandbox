@@ -27,6 +27,12 @@
         android:layout_height="wrap_content"
         android:text="Send notification"/>
 
+    <Button
+        android:id="@+id/button_resource_annotations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Resource annotations"/>
+
     <EditText
         android:id="@+id/first_name"
         android:layout_width="match_parent"

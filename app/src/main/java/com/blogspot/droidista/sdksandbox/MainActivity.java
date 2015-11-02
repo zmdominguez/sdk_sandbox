@@ -15,7 +15,6 @@ import android.view.MenuItem;
 import android.view.View;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -43,6 +42,12 @@ public class MainActivity extends Activity {
     public void goToPercentInListMinHeight(View view) {
         Intent intent = new Intent(this, PercentInListActivity.class);
         intent.putExtra(PercentInListActivity.EXTRA_WITH_MIN_HEIGHT, true);
+        startActivity(intent);
+    }
+
+    @Nullable @OnClick(R.id.button_resource_annotations)
+    public void goToResourceAnnotations(View view) {
+        Intent intent = new Intent(this, ResourceAnnotationsActivity.class);
         startActivity(intent);
     }
 
