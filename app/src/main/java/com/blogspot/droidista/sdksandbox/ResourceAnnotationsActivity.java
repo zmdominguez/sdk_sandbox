@@ -28,6 +28,8 @@ public class ResourceAnnotationsActivity extends AppCompatActivity {
         }
     }
 
+
+
     enum AdventureTimeCharacters {
         JAKE(R.id.jake_quote, R.string.jake_quote, R.string.jake, R.color.jake),
         FINN(R.id.finn_quote, R.string.finn_quote, R.string.finn, R.color.finn),
