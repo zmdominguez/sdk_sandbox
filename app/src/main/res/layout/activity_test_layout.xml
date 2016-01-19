@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                               xmlns:app="http://schemas.android.com/apk/res-auto"
+                                               android:background="#b90b0e"
+                                               android:layout_width="match_parent"
+                                               android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            app:layout_widthPercent="100%"
+            app:layout_aspectRatio="178%"
+            android:background="#dbc4bcc4"
+            android:id="@+id/main_image"/>
+
+        <ImageView
+            app:layout_widthPercent="33.33%"
+            app:layout_aspectRatio="178%"
+            android:layout_below="@id/main_image"
+            android:background="#71d4cd"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/image_1"/>
+
+        <ImageView
+            app:layout_widthPercent="33.33%"
+            app:layout_aspectRatio="178%"
+            android:layout_below="@id/main_image"
+            android:background="#e4d20c"
+            android:layout_toRightOf="@id/image_1"
+            android:id="@+id/image_2"/>
+
+        <ImageView
+            app:layout_widthPercent="33.33%"
+            android:layout_width="wrap_content"
+            app:layout_aspectRatio="178%"
+            android:layout_below="@id/main_image"
+            android:background="#3edf0d"
+            android:layout_toRightOf="@id/image_2"
+            android:id="@+id/view_more"/>
+
+
+</android.support.percent.PercentRelativeLayout>

@@ -62,6 +62,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    @Nullable @OnClick(R.id.button_pct_33)
+    public void goToPercentLayout(View view) {
+        Intent intent = new Intent(this, PercentLayoutActivity.class);
+        startActivity(intent);
+    }
+
     @OnClick(R.id.button_send_notification)
     public void onSendNotificationClick(View view) {
         final NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
