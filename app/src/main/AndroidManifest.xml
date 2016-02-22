@@ -38,6 +38,11 @@
             android:name=".PercentLayoutActivity"
             android:label="33%!">
         </activity>
+
+        <activity
+            android:name=".LinearLayoutActivity"
+            android:label="LinearLayoutDemo">
+        </activity>
     </application>
 
 </manifest>

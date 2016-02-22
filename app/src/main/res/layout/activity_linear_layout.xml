@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:orientation="vertical"
+              android:layout_height="match_parent"
+              android:divider="@drawable/divider_horizontal_dark"
+              android:showDividers="middle">
+
+    <TextView
+        android:id="@+id/text1"
+        android:drawableTop="@drawable/ic_notifications_black_24dp"
+        android:drawableTint="@color/lemongrab"
+        android:drawablePadding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:padding="16dp"
+        android:text="Text 1"/>
+
+    <TextView
+        android:id="@+id/text2"
+        android:textSize="20sp"
+        android:drawableRight="@drawable/ic_notifications_black_24dp"
+        android:drawablePadding="8dp"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Text 2"/>
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_notifications_black_24dp"
+        android:drawablePadding="8dp"
+        android:padding="16dp"
+        android:text="Text 3"
+        android:textSize="20sp"/>
+
+
+    <TextView
+        android:id="@+id/text4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_notifications_black_24dp"
+        android:drawablePadding="8dp"
+        android:padding="16dp"
+        android:text="Text 4"
+        android:textSize="20sp" />
+
+
+</LinearLayout>

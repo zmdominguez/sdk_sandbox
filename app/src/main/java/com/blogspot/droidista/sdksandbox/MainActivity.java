@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-
     @Override
     protected void onResume() {
         super.onResume();
@@ -65,6 +64,12 @@ public class MainActivity extends AppCompatActivity {
     @Nullable @OnClick(R.id.button_pct_33)
     public void goToPercentLayout(View view) {
         Intent intent = new Intent(this, PercentLayoutActivity.class);
+        startActivity(intent);
+    }
+
+    @Nullable @OnClick(R.id.button_linear_layouts)
+    public void goToLinearLayoutDemo(View view) {
+        Intent intent = new Intent(this, LinearLayoutActivity.class);
         startActivity(intent);
     }
 
