@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="8dp"
+    android:background="#df2a2a">
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:id="@+id/spacer"
+        android:layout_height="200dp"/>
+
+    <!-- It's here because we want it to go under everything else -->
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/bubble_discount"
+        android:layout_alignRight="@+id/bubble_discount"
+        android:layout_alignTop="@+id/bubble_discount"
+        android:layout_alignBottom="@+id/full_schedule"
+        android:paddingBottom="12dp">
+        <View
+            android:id="@+id/connector"
+            android:layout_width="2dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/shape_connector" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/bubble_discount"
+        android:layout_below="@id/spacer"
+        android:background="@drawable/shape_circle"
+        android:gravity="center"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="30%"/>
+    <TextView
+        android:id="@+id/merchant_name"
+        android:layout_toRightOf="@id/bubble_discount"
+        android:layout_alignTop="@id/bubble_discount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:textSize="34sp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="Blah blah blah long name awesome place magic fairy dust"/>
+    <TextView
+        android:id="@+id/time_thing"
+        android:layout_alignLeft="@id/merchant_name"
+        android:layout_below="@id/merchant_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="Now until 4:00 PM"/>
+    <TextView
+        android:id="@+id/more_time_things"
+        android:layout_below="@id/time_thing"
+        android:layout_alignLeft="@id/merchant_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:padding="8dp"
+        android:text="4:00 PM - 11:59 PM"/>
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/bubble_discount"
+        android:layout_alignRight="@id/bubble_discount"
+        android:layout_alignTop="@id/more_time_things"
+        android:layout_alignBottom="@id/more_time_things">
+        <TextView
+            android:id="@+id/bubble_more_discounts"
+            android:background="@drawable/shape_circle"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:textSize="10sp"
+            android:layout_alignLeft="@id/bubble_discount"
+            android:text="10%"/>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/full_schedule"
+        android:layout_below="@id/more_time_things"
+        android:layout_alignLeft="@id/merchant_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:padding="8dp"
+        android:text="Full Schedule"/>
+    <FrameLayout
+        android:id="@+id/container_bubble_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/bubble_discount"
+        android:layout_alignRight="@id/bubble_discount"
+        android:layout_alignTop="@id/full_schedule"
+        android:layout_alignBottom="@id/full_schedule">
+        <TextView
+            android:id="@+id/bubble_schedule"
+            android:background="@drawable/shape_circle"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:textSize="10sp"
+            android:layout_alignLeft="@id/bubble_discount"
+            android:text="10%"/>
+    </FrameLayout>
+
+</RelativeLayout>

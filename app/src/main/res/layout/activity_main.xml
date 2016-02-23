@@ -34,6 +34,12 @@
         android:text="LinearLayout demo"/>
 
     <Button
+        android:id="@+id/button_bubble_things"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bubble Things"/>
+
+    <Button
         android:id="@+id/button_send_notification"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

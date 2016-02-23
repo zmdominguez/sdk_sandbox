@@ -73,6 +73,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    @OnClick(R.id.button_bubble_things)
+    public void goToBubbleThings(View view) {
+        Intent intent = new Intent(this, BubbleThingsActivity.class);
+        startActivity(intent);
+    }
+
     @OnClick(R.id.button_send_notification)
     public void onSendNotificationClick(View view) {
         final NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
