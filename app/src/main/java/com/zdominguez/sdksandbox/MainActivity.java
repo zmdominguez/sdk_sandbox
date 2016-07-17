@@ -3,7 +3,6 @@ package com.zdominguez.sdksandbox;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.graphics.Color;
@@ -19,10 +18,10 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 
 import com.zdominguez.sdksandbox.databinding.DialogDataBindingDemoBinding;
+import com.zdominguez.sdksandbox.models.AdventureTimeCharacters;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -189,8 +188,8 @@ public class MainActivity extends AppCompatActivity {
         builder.create().show();
     }
 
-    private ResourceAnnotationsActivity.AdventureTimeCharacters getRandomCharacter() {
-        final ResourceAnnotationsActivity.AdventureTimeCharacters[] characters = ResourceAnnotationsActivity.AdventureTimeCharacters.values();
+    private AdventureTimeCharacters getRandomCharacter() {
+        final AdventureTimeCharacters[] characters = AdventureTimeCharacters.values();
         return characters[mRandom.nextInt(characters.length)];
     }
 
