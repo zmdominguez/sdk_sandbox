@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.0"
 
     defaultConfig {
-        applicationId "com.blogspot.droidista.sdksandbox"
+        applicationId "com.zdominguez.sdksandbox"
         minSdkVersion 21
         targetSdkVersion 23
         versionCode 1
