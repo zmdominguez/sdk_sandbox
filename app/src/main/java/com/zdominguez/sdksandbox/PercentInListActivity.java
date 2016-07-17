@@ -1,4 +1,4 @@
-package com.blogspot.droidista.sdksandbox;
+package com.zdominguez.sdksandbox;
 
 import android.app.Activity;
 import android.os.Bundle;

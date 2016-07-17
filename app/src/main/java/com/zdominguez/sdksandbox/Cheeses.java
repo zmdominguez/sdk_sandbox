@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.blogspot.droidista.sdksandbox;
+package com.zdominguez.sdksandbox;
 
 public class Cheeses {
 

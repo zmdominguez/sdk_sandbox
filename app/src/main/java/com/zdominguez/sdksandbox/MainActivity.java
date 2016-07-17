@@ -1,4 +1,4 @@
-package com.blogspot.droidista.sdksandbox;
+package com.zdominguez.sdksandbox;
 
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -21,7 +21,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import com.blogspot.droidista.sdksandbox.databinding.DialogDataBindingDemoBinding;
+
+import com.zdominguez.sdksandbox.databinding.DialogDataBindingDemoBinding;
 
 import java.util.ArrayList;
 

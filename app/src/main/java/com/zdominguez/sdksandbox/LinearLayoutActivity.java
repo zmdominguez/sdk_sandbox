@@ -1,4 +1,4 @@
-package com.blogspot.droidista.sdksandbox;
+package com.zdominguez.sdksandbox;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

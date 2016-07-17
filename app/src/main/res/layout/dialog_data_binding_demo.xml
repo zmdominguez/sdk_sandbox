@@ -4,7 +4,7 @@
     <data>
         <variable
             name="character"
-            type="com.blogspot.droidista.sdksandbox.ResourceAnnotationsActivity.AdventureTimeCharacters"/>
+            type="com.zdominguez.sdksandbox.ResourceAnnotationsActivity.AdventureTimeCharacters"/>
     </data>
 
     <LinearLayout android:layout_width="match_parent"

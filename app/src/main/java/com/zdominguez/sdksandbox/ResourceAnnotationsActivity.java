@@ -1,4 +1,4 @@
-package com.blogspot.droidista.sdksandbox;
+package com.zdominguez.sdksandbox;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -13,9 +13,6 @@ import android.widget.TextView;
 
 import butterknife.ButterKnife;
 
-/**
- * Created by zarah.dominguez on 2/11/2015.
- */
 public class ResourceAnnotationsActivity extends AppCompatActivity {
 
     @Override
