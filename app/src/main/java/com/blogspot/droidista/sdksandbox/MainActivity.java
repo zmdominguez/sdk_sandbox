@@ -1,12 +1,10 @@
 package com.blogspot.droidista.sdksandbox;
 
-import android.app.Activity;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
-import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -27,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String NOTIFICATION_TAG = "notification_tag";
     public static final int NOTIFICATION_REQUEST_CODE = 100;
+
+    Listing mListing;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -160,6 +160,12 @@ public class MainActivity extends AppCompatActivity {
         final NotificationManager nm = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         nm.cancel(NOTIFICATION_TAG, NOTIFICATION_REQUEST_CODE);
         nm.notify(NOTIFICATION_TAG, NOTIFICATION_REQUEST_CODE, builder.build());
+    }
+
+    @OnClick(R.id.rv_viewstubs)
+    public void onRecyclerViewViewStub(View view) {
+        Intent intent = new Intent(this, RecyclerViewViewStubs.class);
+        startActivity(intent);
     }
 
     @Override

@@ -43,6 +43,11 @@
             android:name=".LinearLayoutActivity"
             android:label="LinearLayoutDemo">
         </activity>
+
+        <activity
+            android:name=".RecyclerViewViewStubs"
+            android:label="RecyclerView + ViewStubs">
+        </activity>
     </application>
 
 </manifest>
