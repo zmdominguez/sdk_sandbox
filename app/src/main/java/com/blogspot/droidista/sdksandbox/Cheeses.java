@@ -16,8 +16,6 @@
 
 package com.blogspot.droidista.sdksandbox;
 
-import java.util.Random;
-
 public class Cheeses {
 
     public static final String[] sCheeseStrings = {
