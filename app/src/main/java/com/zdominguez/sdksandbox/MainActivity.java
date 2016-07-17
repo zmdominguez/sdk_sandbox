@@ -4,6 +4,7 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.databinding.BindingAdapter;
 import android.databinding.DataBindingUtil;
 import android.graphics.Color;
 import android.net.Uri;
@@ -11,14 +12,16 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v4.app.NotificationCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-
+import android.widget.TextView;
 
 import com.zdominguez.sdksandbox.databinding.DialogDataBindingDemoBinding;
 import com.zdominguez.sdksandbox.models.AdventureTimeCharacters;
@@ -191,6 +194,11 @@ public class MainActivity extends AppCompatActivity {
     private AdventureTimeCharacters getRandomCharacter() {
         final AdventureTimeCharacters[] characters = AdventureTimeCharacters.values();
         return characters[mRandom.nextInt(characters.length)];
+    }
+
+    @BindingAdapter({"characterBackground"})
+    public static void characterBackground(TextView textView, AdventureTimeCharacters character) {
+        textView.setBackgroundColor(ContextCompat.getColor(textView.getContext(), character.getColour()));
     }
 
     @Override
