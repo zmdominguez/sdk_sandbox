@@ -76,13 +76,13 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.button_send_notification)
     public void onSendNotificationClick(View view) {
         final NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
-        String title = "<b>82910</b> properties found";
+        String title = "This is a test notification";
         builder
                 .setSmallIcon(R.drawable.ic_notification)
                 .setContentTitle(Html.fromHtml(title))
                 .setContentText(Html.fromHtml("<i>Wow</i> I am from HTML!"))
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-                .setTicker("Properties found in your saved searches")
+                .setTicker("Testing notifications!")
                 .setLights(Color.GREEN, 1000, 1000)
                 .setNumber(30)
                 .setGroupSummary(true)
