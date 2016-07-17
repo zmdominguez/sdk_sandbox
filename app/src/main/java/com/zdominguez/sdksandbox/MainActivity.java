@@ -25,6 +25,7 @@ import android.widget.Toast;
 import com.zdominguez.sdksandbox.databinding.DialogDataBindingDemoBinding;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String NOTIFICATION_TAG = "notification_tag";
     public static final int NOTIFICATION_REQUEST_CODE = 100;
+    private Random mRandom = new Random();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -177,19 +179,19 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.data_binding_alert)
     public void onSendDataBoundAlert() {
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this, R.style.MaterialAlertDialog);
-        builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(MainActivity.this, "OK clicked.", Toast.LENGTH_SHORT).show();
-            }
-        })
+        builder.setPositiveButton(android.R.string.ok, null)
                 .setNegativeButton("Not now", null);
         View view = LayoutInflater.from(MainActivity.this).inflate(R.layout.dialog_data_binding_demo, null);
         DialogDataBindingDemoBinding binding = DataBindingUtil.bind(view);
-        binding.setCharacter(ResourceAnnotationsActivity.AdventureTimeCharacters.LEMONGRAB);
+        binding.setCharacter(getRandomCharacter());
         builder.setView(view);
 
         builder.create().show();
+    }
+
+    private ResourceAnnotationsActivity.AdventureTimeCharacters getRandomCharacter() {
+        final ResourceAnnotationsActivity.AdventureTimeCharacters[] characters = ResourceAnnotationsActivity.AdventureTimeCharacters.values();
+        return characters[mRandom.nextInt(characters.length)];
     }
 
     @Override
