@@ -3,18 +3,25 @@ package com.blogspot.droidista.sdksandbox;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.databinding.DataBindingUtil;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v4.app.NotificationCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
+
+import com.blogspot.droidista.sdksandbox.databinding.DialogDataBindingDemoBinding;
 
 import java.util.ArrayList;
 
@@ -164,6 +171,24 @@ public class MainActivity extends AppCompatActivity {
     public void onRecyclerViewViewStub(View view) {
         Intent intent = new Intent(this, RecyclerViewViewStubs.class);
         startActivity(intent);
+    }
+
+    @OnClick(R.id.data_binding_alert)
+    public void onSendDataBoundAlert() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this, R.style.MaterialAlertDialog);
+        builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Toast.makeText(MainActivity.this, "OK clicked.", Toast.LENGTH_SHORT).show();
+            }
+        })
+                .setNegativeButton("Not now", null);
+        View view = LayoutInflater.from(MainActivity.this).inflate(R.layout.dialog_data_binding_demo, null);
+        DialogDataBindingDemoBinding binding = DataBindingUtil.bind(view);
+        binding.setCharacter(ResourceAnnotationsActivity.AdventureTimeCharacters.LEMONGRAB);
+        builder.setView(view);
+
+        builder.create().show();
     }
 
     @Override

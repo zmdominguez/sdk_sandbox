@@ -30,7 +30,7 @@ public class ResourceAnnotationsActivity extends AppCompatActivity {
 
 
 
-    enum AdventureTimeCharacters {
+    public enum AdventureTimeCharacters {
         JAKE(R.id.jake_quote, R.string.jake_quote, R.string.jake, R.color.jake),
         FINN(R.id.finn_quote, R.string.finn_quote, R.string.finn, R.color.finn),
         LSP(R.id.lsp_quote, R.string.lsp_quote, R.string.lsp, R.color.lsp),
@@ -54,6 +54,22 @@ public class ResourceAnnotationsActivity extends AppCompatActivity {
             spannableStringBuilder.append(" - " + activity.getString(mName), new ForegroundColorSpan(activity.getColor(mColour)), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
             TextView textView = ButterKnife.findById(activity, mTextView);
             textView.setText(spannableStringBuilder, TextView.BufferType.SPANNABLE);
+        }
+
+        public int getTextView() {
+            return mTextView;
+        }
+
+        public int getQuote() {
+            return mQuote;
+        }
+
+        public int getName() {
+            return mName;
+        }
+
+        public int getColour() {
+            return mColour;
         }
     }
 }
