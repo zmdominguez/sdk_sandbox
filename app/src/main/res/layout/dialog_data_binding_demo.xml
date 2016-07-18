@@ -21,8 +21,8 @@
             android:textStyle="bold"
             android:gravity="center_vertical"
             android:paddingLeft="16dp"
-            app:characterBackground="@{character}"
-            android:text="@{character.name}"/>
+            android:backgroundColor="@{character.colour}"
+            android:text="@{character.colour}"/>
 
         <TextView
             android:padding="16dp"

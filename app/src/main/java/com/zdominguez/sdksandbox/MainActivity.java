@@ -196,10 +196,10 @@ public class MainActivity extends AppCompatActivity {
         return characters[mRandom.nextInt(characters.length)];
     }
 
-    @BindingAdapter({"characterBackground"})
+    /*@BindingAdapter({"characterBackground"})
     public static void characterBackground(TextView textView, AdventureTimeCharacters character) {
         textView.setBackgroundColor(ContextCompat.getColor(textView.getContext(), character.getColour()));
-    }
+    }*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
