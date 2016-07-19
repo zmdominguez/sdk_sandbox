@@ -6,6 +6,7 @@
         <variable
             name="character"
             type="com.zdominguez.sdksandbox.models.AdventureTimeCharacters"/>
+        <import type="android.support.v4.content.ContextCompat" />
     </data>
 
     <LinearLayout android:layout_width="match_parent"
@@ -21,8 +22,8 @@
             android:textStyle="bold"
             android:gravity="center_vertical"
             android:paddingLeft="16dp"
-            android:backgroundColor="@{character.colour}"
-            android:text="@{character.colour}"/>
+            android:background="@{ContextCompat.getColor(context, character.colour)}"
+            android:text="@{character.name}"/>
 
         <TextView
             android:padding="16dp"

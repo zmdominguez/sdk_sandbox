@@ -196,11 +196,6 @@ public class MainActivity extends AppCompatActivity {
         return characters[mRandom.nextInt(characters.length)];
     }
 
-    /*@BindingAdapter({"characterBackground"})
-    public static void characterBackground(TextView textView, AdventureTimeCharacters character) {
-        textView.setBackgroundColor(ContextCompat.getColor(textView.getContext(), character.getColour()));
-    }*/
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
