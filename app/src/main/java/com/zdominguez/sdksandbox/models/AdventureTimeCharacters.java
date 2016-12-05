@@ -11,8 +11,13 @@ import android.widget.TextView;
 
 import com.zdominguez.sdksandbox.R;
 
+import org.parceler.Parcel;
+
+import java.util.Random;
+
 import butterknife.ButterKnife;
 
+@Parcel
 public enum AdventureTimeCharacters {
     JAKE(R.id.jake_quote, R.string.jake_quote, R.string.jake, R.color.jake),
     FINN(R.id.finn_quote, R.string.finn_quote, R.string.finn, R.color.finn),
@@ -30,6 +35,10 @@ public enum AdventureTimeCharacters {
         mQuote = quote;
         mName = name;
         mColour = colour;
+    }
+
+    AdventureTimeCharacters(){
+        //For parceler
     }
 
     public void setQuote(Activity activity) {

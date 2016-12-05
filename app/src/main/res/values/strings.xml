@@ -73,4 +73,14 @@
     <string name="pref_ringtone_silent">Silent</string>
 
     <string name="pref_title_vibrate">Vibrate</string>
+    <string name="ultimate_string">%1$s, %2$s is my name.</string>
+    <string name="first_string">%1$d is my number.</string>
+
+
+    <string name="wrong_arg_type">%1$s is my number.</string>
+    <string name="wrong_arg_count">%2$s arguments.</string>
+    <string name="wrong_format">$1$s is wrong.</string>
+    <string name="no_formatting">" is my number."</string>
+    <string name="multiple_args">%1$d is my number, %2$s is my name</string>
+    <string name="multi_args">Hi! My name is %1$s. I have been with %2$s for %3$d years and %3$d months!</string>
 </resources>

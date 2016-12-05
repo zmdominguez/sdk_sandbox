@@ -26,6 +26,9 @@ import android.widget.TextView;
 import com.zdominguez.sdksandbox.databinding.DialogDataBindingDemoBinding;
 import com.zdominguez.sdksandbox.models.AdventureTimeCharacters;
 
+import org.parceler.Parcel;
+import org.parceler.Parcels;
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -36,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String NOTIFICATION_TAG = "notification_tag";
     public static final int NOTIFICATION_REQUEST_CODE = 100;
-    private Random mRandom = new Random();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -191,10 +193,20 @@ public class MainActivity extends AppCompatActivity {
         builder.create().show();
     }
 
+    private Random mRandom = new Random();
+
     private AdventureTimeCharacters getRandomCharacter() {
         final AdventureTimeCharacters[] characters = AdventureTimeCharacters.values();
         return characters[mRandom.nextInt(characters.length)];
     }
+
+    @OnClick(R.id.data_binding_spans)
+    public void onDataBindingSpansClick(View view) {
+        Intent intent = new Intent(this, DataBindingSpans.class);
+        intent.putExtra("extra", Parcels.wrap(getRandomCharacter()));
+        startActivity(intent);
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
