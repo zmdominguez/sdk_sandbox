@@ -70,6 +70,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Data binding spans"/>
+
+        <Button
+            android:id="@+id/text_on_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Readable Text"/>
+
         <EditText
             android:id="@+id/first_name"
             android:layout_width="match_parent"
