@@ -53,6 +53,8 @@
             android:name=".DataBindingSpans"
             android:label="DataBinding + Spans">
         </activity>
+        <activity android:name=".ReadableTextActivity"
+                  android:label="Readable Text" />
     </application>
 
 </manifest>
