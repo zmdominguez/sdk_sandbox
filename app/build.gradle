@@ -2,13 +2,13 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.0"
+    compileSdkVersion 24
+    buildToolsVersion "25.0.0"
 
     defaultConfig {
         applicationId "com.zdominguez.sdksandbox"
-        minSdkVersion 21
-        targetSdkVersion 23
+        minSdkVersion 24
+        targetSdkVersion 24
         versionCode 1
         versionName "1.0"
     }
@@ -25,7 +25,7 @@ android {
     }
 }
 
-ext.supportLibraryVersion = '23.4.0'
+ext.supportLibraryVersion = '24.0.0'
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
@@ -33,6 +33,7 @@ dependencies {
     compile "com.android.support:percent:$supportLibraryVersion"
     compile "com.android.support:support-v4:$supportLibraryVersion"
     compile "com.android.support:design:$supportLibraryVersion"
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
     compile 'com.jakewharton:butterknife:7.0.1'
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
 

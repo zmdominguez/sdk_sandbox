@@ -208,6 +208,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    @OnClick(R.id.constraint_layout)
+    public void onShowConstraintLayout(View view) {
+        Intent intent = new Intent(this, ConstraintLayoutDemo.class);
+        startActivity(intent);
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

@@ -77,6 +77,12 @@
             android:layout_height="wrap_content"
             android:text="Readable Text"/>
 
+        <Button
+            android:id="@+id/constraint_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Constraint Layout"/>
+
         <EditText
             android:id="@+id/first_name"
             android:layout_width="match_parent"
