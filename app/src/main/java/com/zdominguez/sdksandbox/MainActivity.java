@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void goToPercentInList() {
+    public void goToPercentInList(View view) {
         startActivity(new Intent(this, PercentInListActivity.class));
     }
 

@@ -19,7 +19,7 @@
             android:id="@+id/button_pct_in_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="@{() -> handlers.goToPercentInList()}"
+            android:onClick="@{handlers::goToPercentInList}"
             android:text="Percent in list"/>
 
         <Button
