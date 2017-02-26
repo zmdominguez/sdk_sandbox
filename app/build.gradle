@@ -1,14 +1,13 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.neenbedankt.android-apt'
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "25.0.0"
+    compileSdkVersion 25
+    buildToolsVersion "25.0.1"
 
     defaultConfig {
         applicationId "com.zdominguez.sdksandbox"
-        minSdkVersion 24
-        targetSdkVersion 24
+        minSdkVersion 21
+        targetSdkVersion 25
         versionCode 1
         versionName "1.0"
     }
@@ -25,7 +24,7 @@ android {
     }
 }
 
-ext.supportLibraryVersion = '24.0.0'
+ext.supportLibraryVersion = '25.1.0'
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
@@ -38,5 +37,5 @@ dependencies {
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
 
     compile 'org.parceler:parceler-api:1.1.5'
-    apt 'org.parceler:parceler:1.1.5'
+    annotationProcessor 'org.parceler:parceler:1.1.5'
 }
