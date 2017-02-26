@@ -4,15 +4,27 @@ buildscript {
     repositories {
         jcenter()
         mavenCentral()
+        maven {
+            url("/Users/zarah.dominguez/Android/gradle-dev/tools/../maven-repo")
+        }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.3'
+//        classpath 'com.android.tools.build:gradle:2.2.3'
+        classpath 'com.android.tools.build:gradle:2.4.0-dev'
     }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = "3.3"
 }
 
 allprojects {
     repositories {
         jcenter()
+
+        maven {
+            url("/Users/zarah.dominguez/Android/gradle-dev/tools/../maven-repo")
+        }
     }
 }
 

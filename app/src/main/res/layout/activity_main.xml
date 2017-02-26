@@ -1,5 +1,9 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="handlers" type="com.zdominguez.sdksandbox.MainActivity"/>
+    </data>
+    <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
     <LinearLayout
@@ -15,72 +19,84 @@
             android:id="@+id/button_pct_in_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="@{() -> handlers.goToPercentInList()}"
             android:text="Percent in list"/>
 
         <Button
             android:id="@+id/button_pct_in_list_min_height"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="@{() -> handlers.goToPercentInListMinHeight()}"
             android:text="Percent in list (with min height)"/>
 
         <Button
             android:id="@+id/button_pct_33"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="@{() -> handlers.goToPercentLayout()}"
             android:text="Percent 33%"/>
 
         <Button
             android:id="@+id/button_linear_layouts"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="@{() -> handlers.goToLinearLayoutDemo()}"
             android:text="LinearLayout demo"/>
 
         <Button
             android:id="@+id/button_send_notification"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="@{() -> handlers.onSendNotificationClick()}"
             android:text="Send notification"/>
 
         <Button
             android:id="@+id/button_send_peek_notification"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="@{() -> handlers.onSendNotificationPeekClick()}"
             android:text="Send peeking notification"/>
 
         <Button
             android:id="@+id/button_resource_annotations"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="@{() -> handlers.goToResourceAnnotations()}"
             android:text="Resource annotations"/>
 
         <Button
             android:id="@+id/rv_viewstubs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="@{() -> handlers.onRecyclerViewViewStub()}"
             android:text="RecyclerView ViewStubs"/>
 
         <Button
             android:id="@+id/data_binding_alert"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="@{() -> handlers.onSendDataBoundAlert()}"
             android:text="Data binding alert"/>
 
         <Button
             android:id="@+id/data_binding_spans"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="@{() -> handlers.onDataBindingSpansClick()}"
             android:text="Data binding spans"/>
 
         <Button
             android:id="@+id/text_on_bg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="@{() -> handlers.readableTextDemo()}"
             android:text="Readable Text"/>
 
         <Button
             android:id="@+id/constraint_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="@{() -> handlers.onShowConstraintLayout()}"
             android:text="Constraint Layout"/>
 
         <Button
@@ -88,6 +104,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Bottom Sheet Sharing"/>
+
+        <Button android:id="@+id/data_binding_click"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> handlers.onDataBindingLambda()}"
+            android:text="Data Binding Lambdas"/>
 
         <EditText
             android:id="@+id/first_name"
@@ -115,4 +137,5 @@
         </android.support.design.widget.TextInputLayout>
 
     </LinearLayout>
-</ScrollView>
+    </ScrollView>
+</layout>

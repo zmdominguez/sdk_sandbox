@@ -20,6 +20,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.zdominguez.sdksandbox.bottomsheet.BottomSheetShare;
+import com.zdominguez.sdksandbox.databinding.ActivityMainBinding;
 import com.zdominguez.sdksandbox.databinding.DialogDataBindingDemoBinding;
 import com.zdominguez.sdksandbox.models.AdventureTimeCharacters;
 
@@ -28,7 +29,6 @@ import org.parceler.Parcels;
 import java.util.ArrayList;
 import java.util.Random;
 
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
@@ -39,8 +39,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
+        ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        binding.setHandlers(this);
     }
 
     @Override
@@ -49,46 +49,37 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-    @Nullable
-    @OnClick(R.id.button_pct_in_list)
-    public void goToPercentInList(View view) {
+    public void goToPercentInList() {
         startActivity(new Intent(this, PercentInListActivity.class));
     }
 
-    @Nullable @OnClick(R.id.button_pct_in_list_min_height)
-    public void goToPercentInListMinHeight(View view) {
+    public void goToPercentInListMinHeight() {
         Intent intent = new Intent(this, PercentInListActivity.class);
         intent.putExtra(PercentInListActivity.EXTRA_WITH_MIN_HEIGHT, true);
         startActivity(intent);
     }
 
-    @Nullable @OnClick(R.id.button_resource_annotations)
-    public void goToResourceAnnotations(View view) {
+    public void goToResourceAnnotations() {
         Intent intent = new Intent(this, ResourceAnnotationsActivity.class);
         startActivity(intent);
     }
 
-    @Nullable @OnClick(R.id.button_pct_33)
-    public void goToPercentLayout(View view) {
+    public void goToPercentLayout() {
         Intent intent = new Intent(this, PercentLayoutActivity.class);
         startActivity(intent);
     }
 
-    @Nullable @OnClick(R.id.button_linear_layouts)
-    public void goToLinearLayoutDemo(View view) {
+    public void goToLinearLayoutDemo() {
         Intent intent = new Intent(this, LinearLayoutActivity.class);
         startActivity(intent);
     }
 
-    @Nullable @OnClick(R.id.text_on_bg)
     public void readableTextDemo() {
         Intent intent = new Intent(this, ReadableTextActivity.class);
         startActivity(intent);
     }
 
-    @OnClick(R.id.button_send_notification)
-    public void onSendNotificationClick(View view) {
+    public void onSendNotificationClick() {
         final NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
         String title = "This is a test notification";
         builder
@@ -134,8 +125,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    @OnClick(R.id.button_send_peek_notification)
-    public void onSendNotificationPeekClick(View view) {
+    public void onSendNotificationPeekClick() {
         final NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
         String title = "Peeking notification";
         builder
@@ -176,13 +166,11 @@ public class MainActivity extends AppCompatActivity {
         nm.notify(NOTIFICATION_TAG, NOTIFICATION_REQUEST_CODE, builder.build());
     }
 
-    @OnClick(R.id.rv_viewstubs)
-    public void onRecyclerViewViewStub(View view) {
+    public void onRecyclerViewViewStub() {
         Intent intent = new Intent(this, RecyclerViewViewStubs.class);
         startActivity(intent);
     }
 
-    @OnClick(R.id.data_binding_alert)
     public void onSendDataBoundAlert() {
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this, R.style.MaterialAlertDialog);
         builder.setPositiveButton(android.R.string.ok, null)
@@ -202,15 +190,13 @@ public class MainActivity extends AppCompatActivity {
         return characters[mRandom.nextInt(characters.length)];
     }
 
-    @OnClick(R.id.data_binding_spans)
-    public void onDataBindingSpansClick(View view) {
+    public void onDataBindingSpansClick() {
         Intent intent = new Intent(this, DataBindingSpans.class);
         intent.putExtra("extra", Parcels.wrap(getRandomCharacter()));
         startActivity(intent);
     }
 
-    @OnClick(R.id.constraint_layout)
-    public void onShowConstraintLayout(View view) {
+    public void onShowConstraintLayout() {
         Intent intent = new Intent(this, ConstraintLayoutDemo.class);
         startActivity(intent);
     }
@@ -219,6 +205,10 @@ public class MainActivity extends AppCompatActivity {
     public void onBottomSheetShare(View view) {
         Intent intent = new Intent(this, BottomSheetShare.class);
         startActivity(intent);
+    }
+
+    public void onDataBindingLambda() {
+
     }
 
 
