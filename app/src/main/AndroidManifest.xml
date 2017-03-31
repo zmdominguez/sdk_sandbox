@@ -57,6 +57,9 @@
                   android:label="Constraint Layout" />
         <activity android:name=".ReadableTextActivity"
                   android:label="Readable Text" />
+        <activity android:name=".bottomsheet.BottomSheetShare"/>
+        <activity android:name=".bottomsheet.CustomShareActivity"
+            android:label="Hello There!"/>
     </application>
 
 </manifest>

@@ -83,4 +83,5 @@
     <string name="no_formatting">" is my number."</string>
     <string name="multiple_args">%1$d is my number, %2$s is my name</string>
     <string name="multi_args">Hi! My name is %1$s. I have been with %2$s for %3$d years and %3$d months!</string>
+    <string name="share_text">Share text</string>
 </resources>

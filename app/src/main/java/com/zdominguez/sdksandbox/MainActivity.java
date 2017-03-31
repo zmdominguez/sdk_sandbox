@@ -19,6 +19,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.zdominguez.sdksandbox.bottomsheet.BottomSheetShare;
 import com.zdominguez.sdksandbox.databinding.DialogDataBindingDemoBinding;
 import com.zdominguez.sdksandbox.models.AdventureTimeCharacters;
 
@@ -211,6 +212,12 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.constraint_layout)
     public void onShowConstraintLayout(View view) {
         Intent intent = new Intent(this, ConstraintLayoutDemo.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.bottom_sheet_share)
+    public void onBottomSheetShare(View view) {
+        Intent intent = new Intent(this, BottomSheetShare.class);
         startActivity(intent);
     }
 

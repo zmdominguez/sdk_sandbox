@@ -83,6 +83,12 @@
             android:layout_height="wrap_content"
             android:text="Constraint Layout"/>
 
+        <Button
+            android:id="@+id/bottom_sheet_share"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bottom Sheet Sharing"/>
+
         <EditText
             android:id="@+id/first_name"
             android:layout_width="match_parent"
