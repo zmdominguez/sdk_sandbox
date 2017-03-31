@@ -59,7 +59,7 @@
                   android:label="Readable Text" />
         <activity android:name=".bottomsheet.BottomSheetShare"/>
         <activity android:name=".bottomsheet.CustomShareActivity"
-            android:label="Hello There!"/>
+            android:label="Choose Me!"/>
     </application>
 
 </manifest>
