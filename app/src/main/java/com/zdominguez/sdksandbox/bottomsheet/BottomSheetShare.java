@@ -27,7 +27,6 @@ public class BottomSheetShare extends AppCompatActivity {
     public void onShare() {
         // Construct the intent we want to send
         final Intent shareIntent = new Intent(Intent.ACTION_SEND);
-        shareIntent.setAction(Intent.ACTION_SEND);
         shareIntent.putExtra(Intent.EXTRA_TEXT, "This is my text to send.");
         shareIntent.setType("text/plain");
 
