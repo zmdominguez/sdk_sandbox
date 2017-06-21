@@ -7,7 +7,7 @@ import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -15,10 +15,10 @@ import butterknife.ButterKnife;
  */
 public class LinearLayoutActivity extends AppCompatActivity {
 
-    @Bind(R.id.text2)
+    @BindView(R.id.text2)
     TextView mText2;
 
-    @Bind(R.id.text3)
+    @BindView(R.id.text3)
     TextView mText3;
 
     @Override

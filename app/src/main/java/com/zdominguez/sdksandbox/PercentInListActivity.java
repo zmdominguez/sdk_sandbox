@@ -11,14 +11,14 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class PercentInListActivity extends Activity {
 
     public static final String EXTRA_WITH_MIN_HEIGHT = "extra_with_min_height";
 
-    @Bind(R.id.percent_list_items)
+    @BindView(R.id.percent_list_items)
     ListView mListView;
 
     boolean isUseMinHeight;
@@ -100,10 +100,10 @@ public class PercentInListActivity extends Activity {
         }
 
         class ViewHolder {
-            @Bind(R.id.header)
+            @BindView(R.id.header)
             TextView mHeader;
 
-            @Bind(R.id.subheader)
+            @BindView(R.id.subheader)
             TextView mSubHeader;
 
             ViewHolder(View view) {

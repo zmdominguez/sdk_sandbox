@@ -9,7 +9,7 @@ import android.util.Log;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -20,10 +20,10 @@ import butterknife.OnClick;
 public class ReadableTextActivity extends AppCompatActivity {
 
     private static final String TAG = "ReadableTextActivity";
-    @Bind(R.id.input_colour)
+    @BindView(R.id.input_colour)
     EditText inputColour;
 
-    @Bind(R.id.output)
+    @BindView(R.id.output)
     TextView output;
 
     @Override

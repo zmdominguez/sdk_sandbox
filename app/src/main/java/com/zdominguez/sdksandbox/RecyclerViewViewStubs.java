@@ -12,12 +12,12 @@ import android.widget.TextView;
 import java.util.Arrays;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class RecyclerViewViewStubs extends AppCompatActivity {
 
-    @Bind(R.id.recycler_view)
+    @BindView(R.id.recycler_view)
     RecyclerView mRecyclerView;
 
     private List<String> mEntries = Arrays.asList(Cheeses.sCheeseStrings);
@@ -67,16 +67,16 @@ public class RecyclerViewViewStubs extends AppCompatActivity {
 
     class ViewStubbyHolder extends RecyclerView.ViewHolder {
 
-        @Bind(R.id.stub_bottom)
+        @BindView(R.id.stub_bottom)
         ViewGroup mBottomStub;
 
-        @Bind(R.id.stub_top)
+        @BindView(R.id.stub_top)
         ViewGroup mTopStub;
 
-        @Bind(R.id.text)
+        @BindView(R.id.text)
         TextView mTextView;
 
-        @Bind(R.id.bottom_text)
+        @BindView(R.id.bottom_text)
         TextView mTextViewBottom;
 
         public ViewStubbyHolder(View view) {
