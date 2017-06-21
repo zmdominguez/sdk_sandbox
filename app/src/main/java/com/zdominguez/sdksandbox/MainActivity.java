@@ -211,6 +211,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void onInflateLayoutParams() {
+        Intent intent = new Intent(this, InflateLayoutParams.class);
+        startActivity(intent);
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

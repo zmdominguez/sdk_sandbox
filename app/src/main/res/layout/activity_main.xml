@@ -105,10 +105,18 @@
             android:layout_height="wrap_content"
             android:text="Bottom Sheet Sharing"/>
 
-        <Button android:id="@+id/data_binding_click"
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> handlers.onInflateLayoutParams()}"
+            android:text="Inflate layout params"/>
+
+        <Button
+            android:id="@+id/data_binding_click"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="@{() -> handlers.onDataBindingLambda()}"
+            android:visibility="gone"
             android:text="Data Binding Lambdas"/>
 
         <EditText

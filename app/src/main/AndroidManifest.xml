@@ -38,28 +38,30 @@
             android:name=".PercentLayoutActivity"
             android:label="33%!">
         </activity>
-
         <activity
             android:name=".LinearLayoutActivity"
             android:label="LinearLayoutDemo">
         </activity>
-
         <activity
             android:name=".RecyclerViewViewStubs"
             android:label="RecyclerView + ViewStubs">
         </activity>
-
         <activity
             android:name=".DataBindingSpans"
             android:label="DataBinding + Spans">
         </activity>
-        <activity android:name=".ConstraintLayoutDemo"
-                  android:label="Constraint Layout" />
-        <activity android:name=".ReadableTextActivity"
-                  android:label="Readable Text" />
+        <activity
+            android:name=".ConstraintLayoutDemo"
+            android:label="Constraint Layout"/>
+        <activity
+            android:name=".ReadableTextActivity"
+            android:label="Readable Text"/>
         <activity android:name=".bottomsheet.BottomSheetShare"/>
-        <activity android:name=".bottomsheet.CustomShareActivity"
+        <activity
+            android:name=".bottomsheet.CustomShareActivity"
             android:label="Choose Me!"/>
+        <activity android:name=".InflateLayoutParams">
+        </activity>
     </application>
 
 </manifest>
