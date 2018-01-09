@@ -25,6 +25,8 @@ android {
 }
 
 ext.supportLibraryVersion = "25.4.0"
+ext.parcelerVersion= "1.1.5"
+ext.butterknifeVersion = "8.6.0"
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
@@ -35,11 +37,11 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
 
-    compile 'org.parceler:parceler-api:1.1.5'
-    annotationProcessor 'org.parceler:parceler:1.1.5'
+    compile "org.parceler:parceler-api:$parcelerVersion"
+    annotationProcessor "org.parceler:parceler:$parcelerVersion"
 
-    compile 'com.jakewharton:butterknife:8.6.0'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
+    compile "com.jakewharton:butterknife:$butterknifeVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$butterknifeVersion"
 
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
 }
