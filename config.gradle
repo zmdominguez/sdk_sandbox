@@ -1,0 +1,9 @@
+ext {
+    TARGET_SDK = 27
+    MIN_SDK = 21
+    BUILD_TOOLS = "27.0.3"
+
+    supportLibraryVersion = "27.1.1"
+    parcelerVersion= "1.1.5"
+    butterknifeVersion = "8.6.0"
+}

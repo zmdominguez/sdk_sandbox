@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "26.0.2"
+    compileSdkVersion TARGET_SDK
+    buildToolsVersion BUILD_TOOLS
 
     defaultConfig {
         applicationId "com.zdominguez.sdksandbox"
-        minSdkVersion 21
-        targetSdkVersion 25
+        minSdkVersion MIN_SDK
+        targetSdkVersion TARGET_SDK
         versionCode 1
         versionName "1.0"
     }
@@ -24,24 +24,20 @@ android {
     }
 }
 
-ext.supportLibraryVersion = "25.4.0"
-ext.parcelerVersion= "1.1.5"
-ext.butterknifeVersion = "8.6.0"
-
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
-    compile "com.android.support:percent:$supportLibraryVersion"
-    compile "com.android.support:support-v4:$supportLibraryVersion"
-    compile "com.android.support:design:$supportLibraryVersion"
-    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
-    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'junit:junit:4.12'
+    implementation "com.android.support:percent:$supportLibraryVersion"
+    implementation "com.android.support:support-v4:$supportLibraryVersion"
+    implementation "com.android.support:design:$supportLibraryVersion"
+    implementation 'com.squareup.retrofit2:retrofit:2.1.0'
 
-    compile "org.parceler:parceler-api:$parcelerVersion"
+    implementation "org.parceler:parceler-api:$parcelerVersion"
     annotationProcessor "org.parceler:parceler:$parcelerVersion"
 
-    compile "com.jakewharton:butterknife:$butterknifeVersion"
+    implementation "com.jakewharton:butterknife:$butterknifeVersion"
     annotationProcessor "com.jakewharton:butterknife-compiler:$butterknifeVersion"
 
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+
 }
