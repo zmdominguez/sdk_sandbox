@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <style name="Theme.Sandbox" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#1e88e5</item>
+        <item name="colorPrimaryDark">#0d47a1</item>
+        <item name="colorAccent">#42a5f5</item>
+        <item name="buttonStyle">@style/Button.Primary</item>
+    </style>
     <style name="MaterialAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert"/>
+
+    <style name="Base.ThemeOverlay.Toolbar.Inverse" parent="ThemeOverlay.AppCompat.Light">
+        <!-- THIS is where you can color the arrow -->
+        <item name="colorControlNormal">?colorAccent</item>
+    </style>
+
+    <style name="ThemeOverlay.Toolbar.Inverse.Editable" parent="Base.ThemeOverlay.Toolbar.Inverse" />
+
+    <style name="ThemeOverlay.Toolbar.Inverse" parent="Base.ThemeOverlay.Toolbar.Inverse">
+        <item name="android:background">@android:color/white</item>
+    </style>
 </resources>
