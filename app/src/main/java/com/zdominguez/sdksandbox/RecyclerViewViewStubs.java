@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import android.widget.Toast;
 import java.util.Arrays;
 import java.util.List;
 
@@ -40,7 +41,7 @@ public class RecyclerViewViewStubs extends AppCompatActivity {
 
         @Override
         public void onBindViewHolder(ViewStubbyHolder holder, int position) {
-            String cheeseName = mEntries.get(position);
+            final String cheeseName = mEntries.get(position);
 
             // For even positions, show bottom
             TextView textView;
@@ -57,6 +58,11 @@ public class RecyclerViewViewStubs extends AppCompatActivity {
                 textView = holder.mTextView;
             }
             textView.setText(position + ": " + cheeseName);
+            textView.setOnClickListener(new View.OnClickListener() {
+                @Override public void onClick(View view) {
+                    Toast.makeText(view.getContext(), "Clicked on " + cheeseName, Toast.LENGTH_LONG).show();
+                }
+            });
         }
 
         @Override

@@ -5,6 +5,7 @@
         <item name="colorPrimaryDark">#0d47a1</item>
         <item name="colorAccent">#42a5f5</item>
         <item name="buttonStyle">@style/Button.Primary</item>
+        <item name="colorControlHighlight">#bbdefb</item>
     </style>
     <style name="MaterialAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert"/>
 
