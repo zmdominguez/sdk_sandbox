@@ -58,11 +58,13 @@ public class RecyclerViewViewStubs extends AppCompatActivity {
                 textView = holder.mTextView;
             }
             textView.setText(position + ": " + cheeseName);
-            textView.setOnClickListener(new View.OnClickListener() {
-                @Override public void onClick(View view) {
-                    Toast.makeText(view.getContext(), "Clicked on " + cheeseName, Toast.LENGTH_LONG).show();
-                }
-            });
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                                                   @Override public void onClick(View view) {
+                                                       Toast.makeText(view.getContext(), "Clicked on " + cheeseName, Toast.LENGTH_LONG)
+                                                           .show();
+                                                   }
+                                               }
+                );
         }
 
         @Override
