@@ -14,9 +14,15 @@
         <item name="colorControlNormal">?colorAccent</item>
     </style>
 
+    <style name="ThemeOverlay.Toolbar" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:background">?colorPrimary</item>
+    </style>
+
     <style name="ThemeOverlay.Toolbar.Inverse.Editable" parent="Base.ThemeOverlay.Toolbar.Inverse" />
 
     <style name="ThemeOverlay.Toolbar.Inverse" parent="Base.ThemeOverlay.Toolbar.Inverse">
         <item name="android:background">@android:color/white</item>
     </style>
+
+    <style name="ThemeOverlay.Toolbar.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark"/>
 </resources>

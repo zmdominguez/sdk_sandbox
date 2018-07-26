@@ -4,8 +4,8 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.support.v4.app.NotificationCompat;
 
+import androidx.core.app.NotificationCompat;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 import com.zdominguez.sdksandbox.MainActivity;
@@ -26,7 +26,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     private void sendNotification(RemoteMessage.Notification notification) {
         final NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
         String title = notification.getTitle();
-        builder.setSmallIcon(R.drawable.ic_notification)
+        builder.setSmallIcon(R.drawable.ic_notification_green)
                 .setContentTitle(title)
                 .setContentText(notification.getBody())
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
