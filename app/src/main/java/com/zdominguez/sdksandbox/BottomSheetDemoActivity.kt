@@ -23,7 +23,8 @@ class BottomSheetDemoActivity : AppCompatActivity() {
         bottomSheetBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
         bottomSheetBehavior.setBottomSheetCallback(object: BottomSheetBehavior.BottomSheetCallback(){
             override fun onSlide(bottomSheet: View, slideOffset: Float) {
-
+                // We want the button to animate when the user is dragging too
+                // this means the ObjectAnimator stuff must move here
             }
 
             override fun onStateChanged(bottomSheet: View, newState: Int) {
