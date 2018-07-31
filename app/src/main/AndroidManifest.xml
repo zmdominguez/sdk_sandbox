@@ -60,6 +60,7 @@
         <activity android:name=".bottomsheet.BottomSheetShare"/>
         <activity android:name=".bottomsheet.CustomShareActivity"
             android:label="Choose Me!"/>
+        <activity android:name=".DpDemoActivity"/>
     </application>
 
 </manifest>

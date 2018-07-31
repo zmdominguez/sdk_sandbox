@@ -49,6 +49,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void openDpDemo() {
+        startActivity(new Intent(this, DpDemoActivity.class));
+    }
     public void goToPercentInList(View view) {
         startActivity(new Intent(this, PercentInListActivity.class));
     }
