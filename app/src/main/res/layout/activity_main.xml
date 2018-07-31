@@ -17,6 +17,13 @@
               tools:context=".MainActivity">
 
         <Button
+            android:id="@+id/button_bottom_sheet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> handlers.openBottomSheetDemo()}"
+            android:text="Bottom Sheet demo"/>
+
+        <Button
             android:id="@+id/button_dps"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
