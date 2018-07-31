@@ -12,6 +12,8 @@ import com.zdominguez.sdksandbox.databinding.ActivityBottomSheetBinding
 
 class BottomSheetDemoActivity : AppCompatActivity() {
     lateinit var bottomSheetBehavior: BottomSheetBehavior<View>
+    var currentRotation: Float = 0f
+
     var showPlaceholder = MutableLiveData<Boolean>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,22 +27,32 @@ class BottomSheetDemoActivity : AppCompatActivity() {
             override fun onSlide(bottomSheet: View, slideOffset: Float) {
                 // We want the button to animate when the user is dragging too
                 // this means the ObjectAnimator stuff must move here
+
+                val view = binding.buttonTotalsExpansion
+                var targetRotation: Float = slideOffset * 180f
+
+
+                ObjectAnimator.ofFloat(view, View.ROTATION, currentRotation, targetRotation).start()
+                currentRotation = if (targetRotation > 360) {
+                    0f
+                } else {
+                    targetRotation
+                }
             }
 
             override fun onStateChanged(bottomSheet: View, newState: Int) {
                 // Skip
             }
-
         })
     }
 
     fun onTotalsClicked(totalsButton: View) {
         if (bottomSheetBehavior.state == BottomSheetBehavior.STATE_COLLAPSED) {
             bottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
-            ObjectAnimator.ofFloat(totalsButton, View.ROTATION, 0f, 180f).start()
+            //ObjectAnimator.ofFloat(totalsButton, View.ROTATION, 0f, 180f).start()
         } else {
             bottomSheetBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
-            ObjectAnimator.ofFloat(totalsButton, View.ROTATION, 180f, 360f).start()
+            //ObjectAnimator.ofFloat(totalsButton, View.ROTATION, 180f, 360f).start()
         }
         showPlaceholder.value = bottomSheetBehavior.state != BottomSheetBehavior.STATE_COLLAPSED ||
             bottomSheetBehavior.state != BottomSheetBehavior.STATE_SETTLING
