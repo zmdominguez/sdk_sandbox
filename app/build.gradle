@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion TARGET_SDK
@@ -39,5 +41,8 @@ dependencies {
     annotationProcessor "com.jakewharton:butterknife-compiler:$butterknifeVersion"
 
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
-
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
 }
