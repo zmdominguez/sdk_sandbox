@@ -60,6 +60,8 @@
         <activity android:name=".bottomsheet.BottomSheetShare"/>
         <activity android:name=".bottomsheet.CustomShareActivity"
             android:label="Choose Me!"/>
+        <activity android:name=".ConstraintLayoutDemoKt"
+            android:label="Constraint Groups"/>
     </application>
 
 </manifest>
