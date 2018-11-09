@@ -197,7 +197,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onShowConstraintLayout() {
-        Intent intent = new Intent(this, ConstraintLayoutDemoKt.class);
+        Intent intent = new Intent(this, ConstraintLayoutDemo.class);
         startActivity(intent);
     }
 

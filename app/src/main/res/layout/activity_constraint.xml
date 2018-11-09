@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
     <data>
-        <import type="android.view.View" />
+        <import type="android.view.View"/>
     </data>
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
@@ -15,8 +15,9 @@
             android:layout_width="128dp"
             android:layout_height="0dp"
             app:layout_constraintDimensionRatio="h,1:1"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toLeftOf="@id/image_2"
+            app:layout_constraintEnd_toStartOf="@id/image_2"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_cake_black_24dp"
             tools:src="@tools:sample/avatars"/>
@@ -25,10 +26,9 @@
             android:id="@+id/image_2"
             android:layout_width="128dp"
             android:layout_height="0dp"
-            android:scaleType="fitCenter"
             app:layout_constraintDimensionRatio="h,1:1"
-            app:layout_constraintLeft_toRightOf="@id/image_1"
-            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image_1"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_cake_black_24dp"
             tools:src="@tools:sample/avatars"/>
@@ -52,7 +52,7 @@
             android:id="@+id/checkbox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Toggle sections"
+            android:text="Toggle section"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/description"/>
@@ -61,8 +61,8 @@
             android:id="@+id/divider"
             android:layout_width="0dp"
             android:layout_height="1dp"
-            android:background="@android:color/darker_gray"
             android:layout_marginTop="16dp"
+            android:background="@android:color/darker_gray"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/checkbox"/>
@@ -103,7 +103,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="@{checkbox.checked ? View.VISIBLE : View.GONE}"
-            app:constraint_referenced_ids="divider,section_description,section_title" />
+            app:constraint_referenced_ids="divider,section_description,section_title"/>
 
     </android.support.constraint.ConstraintLayout>
 </layout>

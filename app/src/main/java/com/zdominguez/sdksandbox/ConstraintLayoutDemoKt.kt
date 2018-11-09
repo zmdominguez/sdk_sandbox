@@ -8,6 +8,6 @@ import com.zdominguez.sdksandbox.databinding.ActivityConstraintBinding
 class ConstraintLayoutDemoKt : AppCompatActivity() {
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding =  DataBindingUtil.setContentView<ActivityConstraintBinding>(this, R.layout.activity_constraint)
+        DataBindingUtil.setContentView<ActivityConstraintBinding>(this, R.layout.activity_constraint)
     }
 }
