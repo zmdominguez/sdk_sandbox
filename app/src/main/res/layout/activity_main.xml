@@ -15,27 +15,13 @@
               android:paddingRight="@dimen/activity_horizontal_margin"
               android:paddingTop="@dimen/activity_vertical_margin"
               tools:context=".MainActivity">
-        <Button
-            android:id="@+id/button_pct_in_list"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="@{handlers::goToPercentInList}"
-            android:text="Percent in list"/>
 
         <Button
-            android:id="@+id/button_pct_in_list_min_height"
+            android:id="@+id/reset_prefs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="@{() -> handlers.goToPercentInListMinHeight()}"
-            android:text="Percent in list (with min height)"/>
-
-        <Button
-            android:id="@+id/button_pct_33"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="@{() -> handlers.goToPercentLayout()}"
-            android:text="Percent 33%"/>
-
+            android:text="Reset Preferences"
+            android:onClick="@{() -> handlers.resetPreferences()}"/>
         <Button
             android:id="@+id/button_linear_layouts"
             android:layout_width="match_parent"
