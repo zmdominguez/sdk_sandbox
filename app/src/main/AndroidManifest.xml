@@ -17,10 +17,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".PercentInListActivity"
-            android:label="@string/title_activity_percent_in_list">
-        </activity>
-        <activity
             android:name=".ResourceAnnotationsActivity"
             android:label="Annotations">
         </activity>
@@ -33,10 +29,6 @@
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.NOTIFICATION_PREFERENCES"/>
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".PercentLayoutActivity"
-            android:label="33%!">
         </activity>
 
         <activity
