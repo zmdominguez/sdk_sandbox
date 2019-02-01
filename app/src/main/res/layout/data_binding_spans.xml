@@ -6,7 +6,7 @@
         <variable
             name="character"
             type="com.zdominguez.sdksandbox.models.AdventureTimeCharacters"/>
-        <import type="android.support.v4.content.ContextCompat" />
+        <import type="androidx.core.content.ContextCompat" />
     </data>
 
     <LinearLayout android:layout_width="match_parent"
