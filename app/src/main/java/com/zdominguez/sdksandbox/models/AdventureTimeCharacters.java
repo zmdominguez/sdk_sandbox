@@ -1,19 +1,18 @@
 package com.zdominguez.sdksandbox.models;
 
 import android.app.Activity;
-import android.support.annotation.ColorRes;
-import android.support.annotation.IdRes;
-import android.support.annotation.StringRes;
+import androidx.annotation.ColorRes;
+import androidx.annotation.IdRes;
+import androidx.annotation.StringRes;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
 import android.widget.TextView;
 
+import androidx.core.content.ContextCompat;
 import com.zdominguez.sdksandbox.R;
 
 import org.parceler.Parcel;
-
-import java.util.Random;
 
 import butterknife.ButterKnife;
 
@@ -43,8 +42,9 @@ public enum AdventureTimeCharacters {
 
     public void setQuote(Activity activity) {
         SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(activity.getString(mQuote));
-        spannableStringBuilder.append(" - " + activity.getString(mName), new ForegroundColorSpan(activity.getColor(mColour)), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-        TextView textView = ButterKnife.findById(activity, mTextView);
+        spannableStringBuilder.append(" - " + activity.getString(mName),
+            new ForegroundColorSpan(ContextCompat.getColor(activity, mColour)), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        TextView textView = activity.findViewById(mTextView);
         textView.setText(spannableStringBuilder, TextView.BufferType.SPANNABLE);
     }
 

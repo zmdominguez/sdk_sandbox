@@ -106,7 +106,7 @@
             android:hint="I am a 'normal' EditText!"
             android:visibility="gone"/>
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/report_listing_comment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -120,7 +120,7 @@
                 android:inputType="textCapSentences"
                 android:imeOptions="actionDone"
                 android:hint="I am an EditText in a TextInputLayout!"/>
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>
     </ScrollView>
