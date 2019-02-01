@@ -116,55 +116,60 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onSendNotificationClick() {
-//        val builder = NotificationCompat.Builder(this)
-//        val title = "This is a test notification"
-//        builder
-//            .setSmallIcon(R.drawable.ic_notification)
-//            .setContentTitle(Html.fromHtml(title))
-//            .setContentText(Html.fromHtml("<i>Wow</i> I am from HTML!"))
-//            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-//            .setTicker("Testing notifications!")
-//            .setLights(Color.GREEN, 1000, 1000)
-//            .setNumber(30)
-//            .setGroupSummary(true)
-//            .setAutoCancel(true)
-//            .setCategory(NotificationCompat.CATEGORY_PROMO)
-//        builder.setLocalOnly(true)
-//        val style = NotificationCompat.InboxStyle()
-//        val inboxLines = ArrayList<String>()
-//        inboxLines.add("Line 1")
-//        inboxLines.add("Line 2")
-//        inboxLines.add("Line 3")
-//        inboxLines.add("Line 4")
-//        inboxLines.add("Line 5")
-//        inboxLines.add("Line 6")
-//        inboxLines.add("Line 7")
-//        inboxLines.add("Line 8")
-//        inboxLines.add("Line 9")
-//        inboxLines.add("Line 10")
-//        for (inboxLine in inboxLines) {
-//            style.addLine(inboxLine)
-//        }
-//        style.setBigContentTitle(Html.fromHtml(title))
-//            .setSummaryText("Tiny summary text!")
-//        builder.setStyle(style)
-//
-//        val notificationIntent = Intent(this, MainActivity::class.java)
-//        notificationIntent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
-//
-//        val pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0)
-//        builder.setContentIntent(pendingIntent)
-//
-//        val nm = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-//        nm.cancel(NOTIFICATION_TAG, NOTIFICATION_REQUEST_CODE)
-//        nm.notify(NOTIFICATION_TAG, NOTIFICATION_REQUEST_CODE, builder.build())
+        createNotificationChannel()
+
+        //sendInboxStyleNotification()
 
         sendBagReminder()
     }
 
-    fun sendBagReminder() {
+    private fun sendInboxStyleNotification() {
+        val builder = NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ID)
+        val title = "This is a test notification"
+        builder
+            .setSmallIcon(R.drawable.ic_notification)
+            .setContentTitle(Html.fromHtml(title))
+            .setContentText(Html.fromHtml("<i>Wow</i> I am from HTML!"))
+            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+            .setTicker("Testing notifications!")
+            .setLights(Color.GREEN, 1000, 1000)
+            .setNumber(30)
+            .setGroupSummary(true)
+            .setAutoCancel(true)
+            .setCategory(NotificationCompat.CATEGORY_PROMO)
+        builder.setLocalOnly(true)
+        val style = NotificationCompat.InboxStyle()
+        val inboxLines = ArrayList<String>()
+        inboxLines.add("Line 1")
+        inboxLines.add("Line 2")
+        inboxLines.add("Line 3")
+        inboxLines.add("Line 4")
+        inboxLines.add("Line 5")
+        inboxLines.add("Line 6")
+        inboxLines.add("Line 7")
+        inboxLines.add("Line 8")
+        inboxLines.add("Line 9")
+        inboxLines.add("Line 10")
+        for (inboxLine in inboxLines) {
+            style.addLine(inboxLine)
+        }
+        style.setBigContentTitle(Html.fromHtml(title))
+            .setSummaryText("Tiny summary text!")
+        builder.setStyle(style)
+
+        val notificationIntent = Intent(this, MainActivity::class.java)
+        notificationIntent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+
+        val pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0)
+        builder.setContentIntent(pendingIntent)
+
+        val nm = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+        nm.cancel(NOTIFICATION_TAG, NOTIFICATION_REQUEST_CODE)
+        nm.notify(NOTIFICATION_TAG, NOTIFICATION_REQUEST_CODE, builder.build())
+    }
+
+    private fun sendBagReminder() {
         val context = this
-        createNotificationChannel()
 
         val notificationIntent = Intent(this, MainActivity::class.java)
         notificationIntent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
