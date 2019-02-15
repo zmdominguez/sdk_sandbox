@@ -54,6 +54,7 @@
             android:label="Choose Me!"/>
         <activity android:name=".ConstraintLayoutDemoKt"
             android:label="Constraint Groups"/>
+        <activity android:name=".DataBindingImportBug"/>
     </application>
 
 </manifest>

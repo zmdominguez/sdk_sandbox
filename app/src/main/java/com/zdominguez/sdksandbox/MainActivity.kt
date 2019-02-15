@@ -286,7 +286,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onDataBindingLambda() {
-
+        val intent = Intent(this, DataBindingImportBug::class.java)
+        startActivity(intent)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
