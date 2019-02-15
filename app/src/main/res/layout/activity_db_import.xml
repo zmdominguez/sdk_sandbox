@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:inputType="text"
             android:imeOptions="actionSend"
-            android:onEditorAction="@{() -> handlers.onEditorAction()}"/>
+            android:onEditorAction="@{(v, id, event) -> handlers.onEditorAction(v, id, event)}"/>
 
     </LinearLayout>
 </layout>
