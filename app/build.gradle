@@ -49,6 +49,8 @@ dependencies {
     implementation "com.jakewharton:butterknife:$butterknifeVersion"
     kapt "com.jakewharton:butterknife-compiler:$butterknifeVersion"
 
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+
     implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
