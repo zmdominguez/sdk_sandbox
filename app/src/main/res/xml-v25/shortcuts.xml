@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="databinding"
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_power"
+        android:shortcutShortLabel="@string/shortcut_databinding_short"
+        android:shortcutLongLabel="@string/shortcut_databinding_long">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.zdominguez.sdksandbox"
+            android:targetClass="com.zdominguez.sdksandbox.MainActivity" />
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.zdominguez.sdksandbox"
+            android:targetClass="com.zdominguez.sdksandbox.DataBindingSpans" />
+    </shortcut>
+    <shortcut
+        android:shortcutId="email"
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_email"
+        android:shortcutShortLabel="@string/shortcut_email_short"
+        android:shortcutLongLabel="@string/shortcut_email_long">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.zdominguez.sdksandbox"
+            android:targetClass="com.zdominguez.sdksandbox.MainActivity" />
+    </shortcut>
+    <shortcut
+        android:shortcutId="settings"
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_settings"
+        android:shortcutShortLabel="@string/shortcut_settings_short"
+        android:shortcutLongLabel="@string/shortcut_settings_long">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.zdominguez.sdksandbox"
+            android:targetClass="com.zdominguez.sdksandbox.MainActivity" />
+    </shortcut>
+    <shortcut
+        android:shortcutId="tags"
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_tags"
+        android:shortcutShortLabel="@string/shortcut_tags_short"
+        android:shortcutLongLabel="@string/shortcut_tags_long">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.zdominguez.sdksandbox"
+            android:targetClass="com.zdominguez.sdksandbox.MainActivity" />
+    </shortcut>
+</shortcuts>
