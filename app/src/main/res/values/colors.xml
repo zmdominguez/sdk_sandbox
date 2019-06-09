@@ -8,5 +8,6 @@
     <color name="red">#f91537</color>
 
     <color name="color_accent">#42a5f5</color>
+    <color name="color_primary">#1E88E5</color>
     <color name="color_grey_100">#f5f5f5</color>
 </resources>
