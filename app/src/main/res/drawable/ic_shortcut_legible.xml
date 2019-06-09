@@ -8,6 +8,6 @@
         android:right="2dp"
         android:bottom="2dp" />
 
-    <item android:drawable="@drawable/ic_shortcut_power_foreground" />
+    <item android:drawable="@drawable/ic_shortcut_legible_foreground" />
 
 </layer-list>

@@ -85,8 +85,8 @@
     <string name="multi_args">Hi! My name is %1$s. I have been with %2$s for %3$d years and %3$d months!</string>
     <string name="share_text">Share text</string>
 
-    <string name="shortcut_databinding_short">Data binding</string>
-    <string name="shortcut_databinding_long">A demo to data binding</string>
+    <string name="shortcut_readable_short">Readable Text</string>
+    <string name="shortcut_readable_long">A demo about making legible text</string>
     <string name="shortcut_email_short">Email</string>
     <string name="shortcut_email_long">Send me an email</string>
     <string name="shortcut_settings_short">Demos</string>

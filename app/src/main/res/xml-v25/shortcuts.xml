@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
     <shortcut
-        android:shortcutId="databinding"
+        android:shortcutId="readable"
         android:enabled="true"
-        android:icon="@drawable/ic_shortcut_power"
-        android:shortcutShortLabel="@string/shortcut_databinding_short"
-        android:shortcutLongLabel="@string/shortcut_databinding_long">
+        android:icon="@drawable/ic_shortcut_legible"
+        android:shortcutShortLabel="@string/shortcut_readable_short"
+        android:shortcutLongLabel="@string/shortcut_readable_long">
         <intent
             android:action="android.intent.action.VIEW"
             android:targetPackage="com.zdominguez.sdksandbox"
@@ -13,7 +13,7 @@
         <intent
             android:action="android.intent.action.VIEW"
             android:targetPackage="com.zdominguez.sdksandbox"
-            android:targetClass="com.zdominguez.sdksandbox.DataBindingSpans" />
+            android:targetClass="com.zdominguez.sdksandbox.ReadableTextActivity" />
     </shortcut>
     <shortcut
         android:shortcutId="email"

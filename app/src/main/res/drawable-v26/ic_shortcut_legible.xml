@@ -3,7 +3,7 @@
     <background android:drawable="@color/color_grey_100" />
     <foreground>
         <inset
-            android:drawable="@drawable/ic_shortcut_power_foreground"
+            android:drawable="@drawable/ic_shortcut_legible_foreground"
             android:inset="9.26%" />
     </foreground>
 </adaptive-icon>
