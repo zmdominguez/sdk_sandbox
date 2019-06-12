@@ -279,9 +279,8 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    @OnClick(R.id.bottom_sheet_share)
-    fun onBottomSheetShare(view: View) {
-        val intent = Intent(this, BottomSheetShare::class.java)
+    fun onBottomSheetShare() {
+        val intent = Intent(this, BottomSheetActivity::class.java)
         startActivity(intent)
     }
 

@@ -1,7 +1,10 @@
 <resources>
 
-   <style name="Button.Primary" parent="Widget.AppCompat.Button.Colored">
+   <style name="Button.Primary" parent="Widget.AppCompat.Button.Colored" />
 
+   <style name="Shape.LargeComponent" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+      <item name="cornerFamily">rounded</item>
+      <item name="cornerSize">36dp</item>
    </style>
 
 </resources>
