@@ -17,6 +17,13 @@
               tools:context=".MainActivity">
 
         <Button
+            android:id="@+id/clickable_spans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Clickable Spans"
+            android:onClick="@{() -> handlers.onClickableSpanClick()}"/>
+
+        <Button
             android:id="@+id/reset_prefs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

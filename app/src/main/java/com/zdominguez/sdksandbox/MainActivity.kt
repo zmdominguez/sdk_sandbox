@@ -58,6 +58,11 @@ class MainActivity : AppCompatActivity() {
         getSharedPreferences("${BuildConfig.APPLICATION_ID}_more_prefs", Context.MODE_PRIVATE).edit().putString("hello", "hi").apply()
     }
 
+    fun onClickableSpanClick() {
+        val intent = Intent(this, SpannableStringsActivity::class.java)
+        startActivity(intent)
+    }
+
     fun goToResourceAnnotations() {
         val intent = Intent(this, ResourceAnnotationsActivity::class.java)
         startActivity(intent)

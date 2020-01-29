@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+    </data>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SpannableStringsActivity">
+
+        <TextView
+            android:id="@+id/change_color_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textColorHighlight="#000000"
+            android:textColorLink="@color/color_clickable_text"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Some text goes here"/>
+
+        <TextView
+            android:id="@+id/no_change_color_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textColorHighlight="#D7F3E4"
+            android:textColorLink="@color/color_alpha_change_clickable_text"
+            app:layout_constraintTop_toBottomOf="@id/change_color_link"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="More text goes here"/>
+
+
+        <TextView
+            android:id="@+id/samples"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textColorHighlight="#000000"
+            android:textColorLink="@color/color_no_change_clickable_text"
+            app:layout_constraintTop_toBottomOf="@id/change_color_link"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="More text goes here"/>
+
+    </LinearLayout>
+</layout>
