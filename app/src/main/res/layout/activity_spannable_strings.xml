@@ -18,8 +18,6 @@
             android:padding="16dp"
             android:textColorHighlight="#000000"
             android:textColorLink="@color/color_clickable_text"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             tools:text="Some text goes here"/>
 
         <TextView
@@ -29,8 +27,6 @@
             android:padding="16dp"
             android:textColorHighlight="#D7F3E4"
             android:textColorLink="@color/color_alpha_change_clickable_text"
-            app:layout_constraintTop_toBottomOf="@id/change_color_link"
-            app:layout_constraintStart_toStartOf="parent"
             tools:text="More text goes here"/>
 
 
@@ -40,9 +36,7 @@
             android:layout_height="wrap_content"
             android:padding="16dp"
             android:textColorHighlight="#000000"
-            android:textColorLink="@color/color_no_change_clickable_text"
-            app:layout_constraintTop_toBottomOf="@id/change_color_link"
-            app:layout_constraintStart_toStartOf="parent"
+            android:textColorLink="#00AB4E"
             tools:text="More text goes here"/>
 
     </LinearLayout>
