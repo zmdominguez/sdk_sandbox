@@ -12,8 +12,15 @@ import com.google.firebase.messaging.RemoteMessage
 import com.google.firebase.messaging.RemoteMessage.Notification
 import com.zdominguez.sdksandbox.MainActivity
 import com.zdominguez.sdksandbox.R.drawable
+import timber.log.Timber
 
 class MyFirebaseMessagingService : FirebaseMessagingService() {
+    override fun onNewToken(token: String) {
+        super.onNewToken(token)
+
+        Timber.i("New Firebase messaging token received $token")
+    }
+
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
         super.onMessageReceived(remoteMessage)
         val notification = remoteMessage.notification
