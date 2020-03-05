@@ -30,20 +30,6 @@
             android:text="LinearLayout demo"/>
 
         <Button
-            android:id="@+id/button_send_notification"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="@{() -> handlers.onSendNotificationClick()}"
-            android:text="Send notification"/>
-
-        <Button
-            android:id="@+id/button_send_peek_notification"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="@{() -> handlers.onSendNotificationPeekClick()}"
-            android:text="Send peeking notification"/>
-
-        <Button
             android:id="@+id/button_resource_annotations"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
