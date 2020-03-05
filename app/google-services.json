@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "145406470254",
+    "firebase_url": "https://sdk-sandbox-92c0c.firebaseio.com",
+    "project_id": "sdk-sandbox-92c0c",
+    "storage_bucket": "sdk-sandbox-92c0c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:145406470254:android:72b78f843f408fb5",
+        "android_client_info": {
+          "package_name": "com.zdominguez.sdksandbox"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "145406470254-dkulh9ca3qnpbunq50pad9lt7jm38bq0.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "145406470254-dkulh9ca3qnpbunq50pad9lt7jm38bq0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATIeH1jZKQRJBOVtxpNb39R2nf5Kf0-gM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

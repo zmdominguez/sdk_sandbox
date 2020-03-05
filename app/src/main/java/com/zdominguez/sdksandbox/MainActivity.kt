@@ -12,11 +12,15 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import butterknife.OnClick
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.iid.FirebaseInstanceId
+import com.zdominguez.sdksandbox.R.string
 import com.zdominguez.sdksandbox.bottomsheet.BottomSheetShare
 import com.zdominguez.sdksandbox.databinding.ActivityMainBinding
 import com.zdominguez.sdksandbox.databinding.DialogDataBindingDemoBinding
 import com.zdominguez.sdksandbox.models.AdventureTimeCharacters
 import org.parceler.Parcels
+import timber.log.Timber
 import java.io.File
 import java.util.Random
 
@@ -134,8 +138,18 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    fun onDataBindingLambda() {
+    fun logFirebaseToken() {
+        FirebaseInstanceId.getInstance().instanceId
+            .addOnCompleteListener(OnCompleteListener { task ->
+                if (!task.isSuccessful) {
+                    Timber.w("getInstanceId failed")
+                    return@OnCompleteListener
+                }
 
+                // Get new Instance ID token
+                val token = task.result?.token
+                Timber.d("Firebase token: $token")
+            })
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -157,11 +171,5 @@ class MainActivity : AppCompatActivity() {
         }
 
         return super.onOptionsItemSelected(item)
-    }
-
-    companion object {
-
-        val NOTIFICATION_TAG = "notification_tag"
-        val NOTIFICATION_REQUEST_CODE = 100
     }
 }
