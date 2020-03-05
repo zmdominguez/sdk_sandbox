@@ -44,10 +44,22 @@ class MainActivity : AppCompatActivity() {
         getSharedPreferences("${BuildConfig.APPLICATION_ID}_info", Context.MODE_PRIVATE).edit().putString("hello", "hi").apply()
         getSharedPreferences("${BuildConfig.APPLICATION_ID}_more_prefs", Context.MODE_PRIVATE).edit().putString("hello", "hi").apply()
 
-        (application as SdkSandboxApplication).remoteConfig.fetch().addOnSuccessListener {
-            val allowRemoteConfig = (application as SdkSandboxApplication).remoteConfig.getBoolean(RemoteConfigValues.REMOTE_CONFIG_ENABLED.key)
-            Timber.i("Should allow remote config? $allowRemoteConfig current version: ${BuildConfig.VERSION_NAME}")
-            binding.allowRemoteConfig.visibility = if (allowRemoteConfig) View.VISIBLE else View.GONE
+        val remoteConfig = (application as SdkSandboxApplication).remoteConfig
+
+        // Only using fetch() here will not make the fetched values available until the next call to this activity's onCreate?
+        // For this example, since this value is based on the app version:
+        // - Scenario user on v1.0.0 upgrades to v2.0.0 will not see the button until after a restart
+        remoteConfig.fetchAndActivate().addOnSuccessListener {
+            val allowRemoteConfig = remoteConfig.getValue(RemoteConfigValues.REMOTE_CONFIG_ENABLED.key)
+            // source: 0 - not found, 1 - local defaults, 2 - activated values
+            Timber.i("Should allow remote config? ${allowRemoteConfig.asBoolean()} source: ${allowRemoteConfig.source} current version: ${BuildConfig.VERSION_NAME}")
+            binding.allowRemoteConfig.visibility = if (allowRemoteConfig.asBoolean()) View.VISIBLE else View.GONE
+        }.addOnCompleteListener {
+            val allValues = remoteConfig.all
+            val sanitised = allValues.map { entry ->
+                "Key = " + entry.key + ", value = " + entry.value.asString() + ", source = " + entry.value.source
+            }
+            Timber.i("Received: ${sanitised.joinToString("\n")}")
         }
     }
 
