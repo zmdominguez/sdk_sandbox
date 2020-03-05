@@ -12,12 +12,12 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import butterknife.OnClick
-import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.iid.FirebaseInstanceId
-import com.zdominguez.sdksandbox.R.string
 import com.zdominguez.sdksandbox.bottomsheet.BottomSheetShare
 import com.zdominguez.sdksandbox.databinding.ActivityMainBinding
 import com.zdominguez.sdksandbox.databinding.DialogDataBindingDemoBinding
+import com.zdominguez.sdksandbox.firebase.ABTestDemoActivity
+import com.zdominguez.sdksandbox.firebase.RemoteConfigValues
 import com.zdominguez.sdksandbox.models.AdventureTimeCharacters
 import org.parceler.Parcels
 import timber.log.Timber
@@ -43,6 +43,12 @@ class MainActivity : AppCompatActivity() {
         PreferenceManager.getDefaultSharedPreferences(this).edit().putBoolean("is_launched", false).apply()
         getSharedPreferences("${BuildConfig.APPLICATION_ID}_info", Context.MODE_PRIVATE).edit().putString("hello", "hi").apply()
         getSharedPreferences("${BuildConfig.APPLICATION_ID}_more_prefs", Context.MODE_PRIVATE).edit().putString("hello", "hi").apply()
+
+        (application as SdkSandboxApplication).remoteConfig.fetch().addOnSuccessListener {
+            val allowRemoteConfig = (application as SdkSandboxApplication).remoteConfig.getBoolean(RemoteConfigValues.REMOTE_CONFIG_ENABLED.key)
+            Timber.i("Should allow remote config? $allowRemoteConfig current version: ${BuildConfig.VERSION_NAME}")
+            binding.allowRemoteConfig.visibility = if (allowRemoteConfig) View.VISIBLE else View.GONE
+        }
     }
 
     fun goToResourceAnnotations() {
@@ -140,16 +146,12 @@ class MainActivity : AppCompatActivity() {
 
     fun logFirebaseToken() {
         FirebaseInstanceId.getInstance().instanceId
-            .addOnCompleteListener(OnCompleteListener { task ->
-                if (!task.isSuccessful) {
-                    Timber.w("getInstanceId failed")
-                    return@OnCompleteListener
-                }
+            .addOnSuccessListener { result -> Timber.d("Firebase token: ${result.token}") }
+    }
 
-                // Get new Instance ID token
-                val token = task.result?.token
-                Timber.d("Firebase token: $token")
-            })
+    fun showRemoteConfigDemo() {
+        val intent = Intent(this, ABTestDemoActivity::class.java)
+        startActivity(intent)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

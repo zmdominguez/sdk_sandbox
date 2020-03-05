@@ -75,6 +75,7 @@
             android:label="Choose Me!"/>
         <activity android:name=".ConstraintLayoutDemoKt"
             android:label="Constraint Groups"/>
+        <activity android:name=".firebase.ABTestDemoActivity" />
     </application>
 
 </manifest>
