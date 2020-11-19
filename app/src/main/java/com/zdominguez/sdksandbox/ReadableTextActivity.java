@@ -32,7 +32,6 @@ public class ReadableTextActivity extends AppCompatActivity {
         setContentView(R.layout.activity_readable_text);
         ButterKnife.bind(this);
 
-        //TODO allow dropdown of named colours
     }
 
     @OnClick(R.id.submit_colour)
