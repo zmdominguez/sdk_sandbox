@@ -30,7 +30,7 @@ tasks {
   jar {
     manifest {
       attributes(
-          mapOf("Lint-Registry-v2" to "dev.zarah.lint.checks.IssueRegistry")
+          "Lint-Registry-v2" to "dev.zarah.lint.checks.IssueRegistry"
       )
     }
   }
