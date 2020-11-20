@@ -1,6 +1,6 @@
 ext {
     TARGET_SDK = 28
-    MIN_SDK = 21
+    MIN_SDK = 23
 
     butterknifeVersion = "10.0.0"
     parcelerVersion= "1.1.12"
