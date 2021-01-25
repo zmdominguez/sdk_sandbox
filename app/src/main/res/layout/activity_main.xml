@@ -83,6 +83,12 @@
             android:onClick="@{() -> handlers.logFirebaseToken()}"
             android:text="Log Firebase Token"/>
 
+        <Button android:id="@+id/allow_remote_config"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> handlers.showRemoteConfigDemo()}"
+            android:text="Remote Config demo"/>
+
         <EditText
             android:id="@+id/first_name"
             android:layout_width="match_parent"

@@ -17,10 +17,6 @@
         {
           "client_id": "145406470254-dkulh9ca3qnpbunq50pad9lt7jm38bq0.apps.googleusercontent.com",
           "client_type": 3
-        },
-        {
-          "client_id": "145406470254-dkulh9ca3qnpbunq50pad9lt7jm38bq0.apps.googleusercontent.com",
-          "client_type": 3
         }
       ],
       "api_key": [
@@ -29,15 +25,13 @@
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
+          "other_platform_oauth_client": [
+            {
+              "client_id": "145406470254-dkulh9ca3qnpbunq50pad9lt7jm38bq0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
